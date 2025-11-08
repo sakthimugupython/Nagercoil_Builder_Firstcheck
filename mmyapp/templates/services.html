@@ -1,0 +1,636 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Services - Nagercoil Builders{% endblock %}
+
+{% block content %}
+
+<!-- Services Hero -->
+<section class="hero-section" style="padding-top: 120px;">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-7 mb-4" data-aos="fade-up">
+        <span class="hero-badge"><i class="fas fa-briefcase me-2"></i>Our Services</span>
+        <h1 class="hero-title">End-to-End <span class="highlight">Construction</span> Services</h1>
+        <p class="hero-description">From concept to completion — consulting, design, build, interiors, and renovation. Get everything managed by a single trusted team.</p>
+        <div class="hero-buttons">
+          <a href="{% url 'contact' %}" class="btn btn-primary-custom"><i class="fas fa-phone me-2"></i>Talk to an Expert</a>
+          <a href="{% url 'contact' %}#contact-form" class="btn btn-outline-custom"><i class="fas fa-paper-plane me-2"></i>Get an Estimate</a>
+        </div>
+      </div>
+      <div class="col-lg-5" data-aos="fade-left">
+        <div class="hero-image">
+          <div class="floating-card card-1"><i class="fas fa-ruler-combined"></i><span>Plan & Design</span></div>
+          <div class="floating-card card-2"><i class="fas fa-hard-hat"></i><span>Construction</span></div>
+          <div class="floating-card card-3"><i class="fas fa-couch"></i><span>Interiors</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Grid -->
+<section class="services-section" id="services">
+  <div class="container">
+    <div class="row justify-content-center text-center mb-5">
+      <div class="col-lg-8" data-aos="fade-up">
+        <span class="section-badge"><i class="fas fa-cogs me-2"></i>Services We Provide</span>
+        <h2 class="section-title">Comprehensive Solutions</h2>
+      </div>
+    </div>
+
+    <div class="row g-4 align-items-stretch">
+      <!-- Consulting -->
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80');"></div>
+          <div class="service-card-content">
+            <div>
+              <div class="service-card-header">
+                <div class="service-icon"><i class="fas fa-user-tie"></i></div>
+                <h3 class="service-title">Consulting</h3>
+              </div>
+              <p class="service-description">Expert guidance to assess challenges, plan strategy, and reduce risks across your project lifecycle.</p>
+            </div>
+            <div class="service-card-footer">
+              <button class="btn btn-outline-custom" data-bs-toggle="modal" data-bs-target="#modalConsulting">
+                <i class="fas fa-arrow-right me-2"></i>View Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Estimate -->
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80');"></div>
+          <div class="service-card-content">
+            <div>
+              <div class="service-card-header">
+                <div class="service-icon"><i class="fas fa-calculator"></i></div>
+                <h3 class="service-title">Estimate</h3>
+              </div>
+              <p class="service-description">Transparent budgetary estimates for cost, schedule, and materials to support informed decisions.</p>
+            </div>
+            <div class="service-card-footer">
+              <button class="btn btn-outline-custom" data-bs-toggle="modal" data-bs-target="#modalEstimate">
+                <i class="fas fa-arrow-right me-2"></i>View Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Plan & Design -->
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80');"></div>
+          <div class="service-card-content">
+            <div>
+              <div class="service-card-header">
+                <div class="service-icon"><i class="fas fa-drafting-compass"></i></div>
+                <h3 class="service-title">Plan & Design</h3>
+              </div>
+              <p class="service-description">Architectural planning, drawings, and 3D modeling to translate your ideas into build-ready designs.</p>
+            </div>
+            <div class="service-card-footer">
+              <button class="btn btn-outline-custom" data-bs-toggle="modal" data-bs-target="#modalPlanDesign">
+                <i class="fas fa-arrow-right me-2"></i>View Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Construction -->
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80');"></div>
+          <div class="service-card-content">
+            <div>
+              <div class="service-card-header">
+                <div class="service-icon"><i class="fas fa-hard-hat"></i></div>
+                <h3 class="service-title">Construction</h3>
+              </div>
+              <p class="service-description">End-to-end execution across residential, commercial, and interior fit-outs with strict quality control.</p>
+            </div>
+            <div class="service-card-footer">
+              <button class="btn btn-outline-custom" data-bs-toggle="modal" data-bs-target="#modalConstruction">
+                <i class="fas fa-arrow-right me-2"></i>View Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flooring Work -->
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1615873968403-89e068629265?w=800&q=80');"></div>
+          <div class="service-card-content">
+            <div>
+              <div class="service-card-header">
+                <div class="service-icon"><i class="fas fa-th-large"></i></div>
+                <h3 class="service-title">Flooring Work</h3>
+              </div>
+              <p class="service-description">Premium tile, granite, wooden, and vinyl solutions with precision laying and finishing.</p>
+            </div>
+            <div class="service-card-footer">
+              <button class="btn btn-outline-custom" data-bs-toggle="modal" data-bs-target="#modalFlooring">
+                <i class="fas fa-arrow-right me-2"></i>View Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Painting Work -->
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&q=80');"></div>
+          <div class="service-card-content">
+            <div>
+              <div class="service-card-header">
+                <div class="service-icon"><i class="fas fa-paint-roller"></i></div>
+                <h3 class="service-title">Painting Work</h3>
+              </div>
+              <p class="service-description">Interior and exterior painting with putty, primer, and premium finishes for long-lasting results.</p>
+            </div>
+            <div class="service-card-footer">
+              <button class="btn btn-outline-custom" data-bs-toggle="modal" data-bs-target="#modalPainting">
+                <i class="fas fa-arrow-right me-2"></i>View Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3D Elevation Design -->
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80');"></div>
+          <div class="service-card-content">
+            <div>
+              <div class="service-card-header">
+                <div class="service-icon"><i class="fas fa-cubes"></i></div>
+                <h3 class="service-title">3D Elevation Design</h3>
+              </div>
+              <p class="service-description">Realistic exterior visualizations with materials, lighting, and landscaping for informed decisions.</p>
+            </div>
+            <div class="service-card-footer">
+              <button class="btn btn-outline-custom" data-bs-toggle="modal" data-bs-target="#modal3D">
+                <i class="fas fa-arrow-right me-2"></i>View Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Electric Work -->
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&q=80');"></div>
+          <div class="service-card-content">
+            <div>
+              <div class="service-card-header">
+                <div class="service-icon"><i class="fas fa-bolt"></i></div>
+                <h3 class="service-title">Electric Work</h3>
+              </div>
+              <p class="service-description">Wiring, panels, lighting, and safety-compliant electrical systems for homes and commercial spaces.</p>
+            </div>
+            <div class="service-card-footer">
+              <button class="btn btn-outline-custom" data-bs-toggle="modal" data-bs-target="#modalElectric">
+                <i class="fas fa-arrow-right me-2"></i>View Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interior Work -->
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80');"></div>
+          <div class="service-card-content">
+            <div>
+              <div class="service-card-header">
+                <div class="service-icon"><i class="fas fa-couch"></i></div>
+                <h3 class="service-title">Interior Work</h3>
+              </div>
+              <p class="service-description">Ceilings, partitioning, cabinetry, lighting, and turnkey interior fit-outs tailored to your space.</p>
+            </div>
+            <div class="service-card-footer">
+              <button class="btn btn-outline-custom" data-bs-toggle="modal" data-bs-target="#modalInteriorWork">
+                <i class="fas fa-arrow-right me-2"></i>View Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Renovation -->
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=800&q=80');"></div>
+          <div class="service-card-content">
+            <div>
+              <div class="service-card-header">
+                <div class="service-icon"><i class="fas fa-sync-alt"></i></div>
+                <h3 class="service-title">Renovation</h3>
+              </div>
+              <p class="service-description">Upgrade kitchens, bathrooms, facades, and complete spaces with minimal disruption and clean finish.</p>
+            </div>
+            <div class="service-card-footer">
+              <button class="btn btn-outline-custom" data-bs-toggle="modal" data-bs-target="#modalRenovation">
+                <i class="fas fa-arrow-right me-2"></i>View Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interior Design -->
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80');"></div>
+          <div class="service-card-content">
+            <div>
+              <div class="service-card-header">
+                <div class="service-icon"><i class="fas fa-palette"></i></div>
+                <h3 class="service-title">Interior Design</h3>
+              </div>
+              <p class="service-description">Space planning, color/material selection, and decor curation for beautiful, functional interiors.</p>
+            </div>
+            <div class="service-card-footer">
+              <button class="btn btn-outline-custom" data-bs-toggle="modal" data-bs-target="#modalInteriorDesign">
+                <i class="fas fa-arrow-right me-2"></i>View Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carpentry Work -->
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1617806118233-18e1de247200?w=800&q=80');"></div>
+          <div class="service-card-content">
+            <div>
+              <div class="service-card-header">
+                <div class="service-icon"><i class="fas fa-toolbox"></i></div>
+                <h3 class="service-title">Carpentry Work</h3>
+              </div>
+              <p class="service-description">Custom wardrobes, kitchens, doors, and frames with durable materials and fine craftsmanship.</p>
+            </div>
+            <div class="service-card-footer">
+              <button class="btn btn-outline-custom" data-bs-toggle="modal" data-bs-target="#modalCarpentry">
+                <i class="fas fa-arrow-right me-2"></i>View Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal fade" id="modalConsulting" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Consulting</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>We provide expert advice to assess challenges, analyze data, and recommend strategies to improve efficiency, solve problems, and drive growth.</p>
+            <h6 class="fw-bold">What we deliver</h6>
+            <ul class="feature-list">
+              <li><i class="fas fa-check-circle"></i> Requirement analysis and feasibility</li>
+              <li><i class="fas fa-check-circle"></i> Budget, timeline, and risk planning</li>
+              <li><i class="fas fa-check-circle"></i> Vendor/material guidance</li>
+              <li><i class="fas fa-check-circle"></i> Compliance and safety inputs</li>
+              <li><i class="fas fa-check-circle"></i> Value engineering options</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <a href="{% url 'contact' %}#contact-form" class="btn btn-primary-custom">Enquire Now</a>
+            <button type="button" class="btn btn-outline-custom" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalEstimate" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Estimate</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Approximate calculations for cost, time, and quantity to support planning, budgeting, and resource allocation.</p>
+            <h6 class="fw-bold">What we deliver</h6>
+            <ul class="feature-list">
+              <li><i class="fas fa-check-circle"></i> BOQ and material take-offs</li>
+              <li><i class="fas fa-check-circle"></i> Cost breakdown with options</li>
+              <li><i class="fas fa-check-circle"></i> Indicative schedule and milestones</li>
+              <li><i class="fas fa-check-circle"></i> Scope and exclusions clarity</li>
+              <li><i class="fas fa-check-circle"></i> Transparent assumptions</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <a href="{% url 'contact' %}#contact-form" class="btn btn-primary-custom">Get an Estimate</a>
+            <button type="button" class="btn btn-outline-custom" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalPlanDesign" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Plan & Design</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Innovative and functional designs tailored to your needs. We provide architectural drawings and 3D models for a seamless transition from concept to construction.</p>
+            <h6 class="fw-bold">What we deliver</h6>
+            <ul class="feature-list">
+              <li><i class="fas fa-check-circle"></i> 2D plans and working drawings</li>
+              <li><i class="fas fa-check-circle"></i> 3D floor plans and elevations</li>
+              <li><i class="fas fa-check-circle"></i> Space planning and Vastu options</li>
+              <li><i class="fas fa-check-circle"></i> Material and finish schedules</li>
+              <li><i class="fas fa-check-circle"></i> Authority submission assistance</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <a href="{% url 'contact' %}#contact-form" class="btn btn-primary-custom">Start Planning</a>
+            <button type="button" class="btn btn-outline-custom" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalConstruction" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Construction</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Planning, design coordination, and execution with modern materials and methods across residential, commercial, and interior projects.</p>
+            <h6 class="fw-bold">What we deliver</h6>
+            <ul class="feature-list">
+              <li><i class="fas fa-check-circle"></i> Structural, masonry, and finishes</li>
+              <li><i class="fas fa-check-circle"></i> Quality checks and supervision</li>
+              <li><i class="fas fa-check-circle"></i> Safety and site management</li>
+              <li><i class="fas fa-check-circle"></i> Cost and schedule tracking</li>
+              <li><i class="fas fa-check-circle"></i> Handover documentation</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <a href="{% url 'contact' %}#contact-form" class="btn btn-primary-custom">Build with Us</a>
+            <button type="button" class="btn btn-outline-custom" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalFlooring" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Flooring Work</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>High-quality installation and maintenance for tile, granite, marble, wood, and vinyl — durable and aesthetically pleasing.</p>
+            <h6 class="fw-bold">What we deliver</h6>
+            <ul class="feature-list">
+              <li><i class="fas fa-check-circle"></i> Subfloor prep and waterproofing</li>
+              <li><i class="fas fa-check-circle"></i> Precision laying and leveling</li>
+              <li><i class="fas fa-check-circle"></i> Skirting, grouting, and trims</li>
+              <li><i class="fas fa-check-circle"></i> Polishing and sealing</li>
+              <li><i class="fas fa-check-circle"></i> Maintenance guidance</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <a href="{% url 'contact' %}#contact-form" class="btn btn-primary-custom">Discuss Flooring</a>
+            <button type="button" class="btn btn-outline-custom" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalPainting" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Painting Work</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Interior and exterior painting with surface preparation, putty, primer, and premium finishes for fresh, long-lasting results.</p>
+            <h6 class="fw-bold">What we deliver</h6>
+            <ul class="feature-list">
+              <li><i class="fas fa-check-circle"></i> Surface preparation and repairs</li>
+              <li><i class="fas fa-check-circle"></i> Putty and primer application</li>
+              <li><i class="fas fa-check-circle"></i> Emulsion, enamel, or texture paints</li>
+              <li><i class="fas fa-check-circle"></i> Clean masking and finishing</li>
+              <li><i class="fas fa-check-circle"></i> Health and safety compliant</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <a href="{% url 'contact' %}#contact-form" class="btn btn-primary-custom">Plan Painting</a>
+            <button type="button" class="btn btn-outline-custom" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal3D" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">3D Elevation Design</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Three-dimensional exteriors with textures, materials, lighting, and landscaping to visualize the final look before construction.</p>
+            <h6 class="fw-bold">What we deliver</h6>
+            <ul class="feature-list">
+              <li><i class="fas fa-check-circle"></i> Photorealistic renders</li>
+              <li><i class="fas fa-check-circle"></i> Multiple material palettes</li>
+              <li><i class="fas fa-check-circle"></i> Day/night lighting previews</li>
+              <li><i class="fas fa-check-circle"></i> Facade and landscape options</li>
+              <li><i class="fas fa-check-circle"></i> Iterations and refinements</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <a href="{% url 'contact' %}#contact-form" class="btn btn-primary-custom">Start 3D Design</a>
+            <button type="button" class="btn btn-outline-custom" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalElectric" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Electric Work</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Installation, maintenance, and repair of electrical systems — wiring, panels, lighting, and communication systems with safety and efficiency.</p>
+            <h6 class="fw-bold">What we deliver</h6>
+            <ul class="feature-list">
+              <li><i class="fas fa-check-circle"></i> New wiring and rewiring</li>
+              <li><i class="fas fa-check-circle"></i> DB/Panel setup and earthing</li>
+              <li><i class="fas fa-check-circle"></i> LED and architectural lighting</li>
+              <li><i class="fas fa-check-circle"></i> UPS/Generator integrations</li>
+              <li><i class="fas fa-check-circle"></i> Code and safety compliance</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <a href="{% url 'contact' %}#contact-form" class="btn btn-primary-custom">Plan Electricals</a>
+            <button type="button" class="btn btn-outline-custom" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalInteriorWork" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Interior Work</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Turnkey interiors including ceilings, partitions, cabinetry, and lighting — aligned with design vision and structural requirements.</p>
+            <h6 class="fw-bold">What we deliver</h6>
+            <ul class="feature-list">
+              <li><i class="fas fa-check-circle"></i> False ceilings and partitions</li>
+              <li><i class="fas fa-check-circle"></i> Modular kitchens and wardrobes</li>
+              <li><i class="fas fa-check-circle"></i> Lighting and electrical integration</li>
+              <li><i class="fas fa-check-circle"></i> Finishes, veneers, and laminates</li>
+              <li><i class="fas fa-check-circle"></i> Clean handover</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <a href="{% url 'contact' %}#contact-form" class="btn btn-primary-custom">Plan Interiors</a>
+            <button type="button" class="btn btn-outline-custom" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalRenovation" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Renovation</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Transform existing spaces to modern standards with expert craftsmanship across plumbing, electrical, flooring, and finishes.</p>
+            <h6 class="fw-bold">What we deliver</h6>
+            <ul class="feature-list">
+              <li><i class="fas fa-check-circle"></i> Structural and layout improvements</li>
+              <li><i class="fas fa-check-circle"></i> Kitchen and bathroom upgrades</li>
+              <li><i class="fas fa-check-circle"></i> Waterproofing and repairs</li>
+              <li><i class="fas fa-check-circle"></i> Painting and flooring refresh</li>
+              <li><i class="fas fa-check-circle"></i> Minimal-disruption execution</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <a href="{% url 'contact' %}#contact-form" class="btn btn-primary-custom">Renovate Now</a>
+            <button type="button" class="btn btn-outline-custom" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalInteriorDesign" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Interior Design</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Enhance interiors with thoughtful space planning, color/material selection, and decor — balancing beauty and function.</p>
+            <h6 class="fw-bold">What we deliver</h6>
+            <ul class="feature-list">
+              <li><i class="fas fa-check-circle"></i> Concept and mood boards</li>
+              <li><i class="fas fa-check-circle"></i> Space and furniture layouts</li>
+              <li><i class="fas fa-check-circle"></i> Material and color palettes</li>
+              <li><i class="fas fa-check-circle"></i> Lighting design coordination</li>
+              <li><i class="fas fa-check-circle"></i> Styling and decor selection</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <a href="{% url 'contact' %}#contact-form" class="btn btn-primary-custom">Design My Space</a>
+            <button type="button" class="btn btn-outline-custom" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalCarpentry" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Carpentry Work</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Custom furniture, cabinetry, doors, frames, and on-site joinery blending precision and creativity to meet your requirements.</p>
+            <h6 class="fw-bold">What we deliver</h6>
+            <ul class="feature-list">
+              <li><i class="fas fa-check-circle"></i> Modular and custom cabinetry</li>
+              <li><i class="fas fa-check-circle"></i> Door/window frames and shutters</li>
+              <li><i class="fas fa-check-circle"></i> Veneer, laminate, and polish finishes</li>
+              <li><i class="fas fa-check-circle"></i> Hardware and accessories fitment</li>
+              <li><i class="fas fa-check-circle"></i> Site measurements and install</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <a href="{% url 'contact' %}#contact-form" class="btn btn-primary-custom">Start Carpentry</a>
+            <button type="button" class="btn btn-outline-custom" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notes -->
+    <div class="row mt-4">
+      <div class="col-lg-10 mx-auto">
+        <div class="alert alert-light border-0" role="alert" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-radius: 16px;">
+          <i class="fas fa-info-circle me-2" style="color: var(--primary-color);"></i>
+          For services not listed or custom requirements, contact us for a tailored proposal with timelines and cost.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8 mb-3 mb-lg-0" data-aos="fade-up">
+        <h2 class="cta-title">Have a project in mind?</h2>
+        <p class="cta-description">Share your requirements and we’ll prepare a detailed proposal with timelines and cost.</p>
+      </div>
+      <div class="col-lg-4 text-lg-end" data-aos="fade-left">
+        <a href="{% url 'contact' %}#contact-form" class="btn btn-cta"><i class="fas fa-paper-plane me-2"></i>Request a Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: builder-website
+    env: python
+    buildCommand: |
+      pip install -r requirements.txt
+      python manage.py collectstatic --noinput
+    startCommand: gunicorn builders.wsgi:application --log-file -
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: builders.settings
+      - key: PYTHON_VERSION
+        value: "3.12"
+    expensive: false
+    plan: starter
