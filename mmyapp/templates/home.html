@@ -22,7 +22,7 @@
                         services that stand the test of time.
                     </p>
                     <div class="hero-buttons">
-                        <a href="#projects" class="btn btn-primary-custom">
+                        <a href="{% url 'projects' %}" class="btn btn-primary-custom">
                             <i class="fas fa-eye me-2"></i>View Projects
                         </a>
                         <a href="#contact" class="btn btn-outline-custom">
@@ -278,42 +278,15 @@
             </p>
         </div>
         <div class="row">
-            <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
+            {% for p in recent_projects %}
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="{{ forloop.counter0|add:1 }}00">
                 <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-image"></i>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-category">Residential</span>
-                        <h4 class="project-title">Luxury Villa</h4>
-                        <p class="project-description">Modern luxury villa with contemporary design</p>
-                    </div>
+                    <div class="project-image" style="background-image: url('{{ p.image.url }}');"></div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="200">
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-image"></i>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-category">Commercial</span>
-                        <h4 class="project-title">Office Complex</h4>
-                        <p class="project-description">State-of-the-art commercial building</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="300">
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-image"></i>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-category">Residential</span>
-                        <h4 class="project-title">Apartment Complex</h4>
-                        <p class="project-description">Multi-story residential apartments</p>
-                    </div>
-                </div>
-            </div>
+            {% empty %}
+            <div class="col-12 text-center text-muted">No recent projects yet.</div>
+            {% endfor %}
         </div>
     </div>
 </section>

@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Projects - Nagercoil Builders{% endblock %}
+
+{% block content %}
+<section class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+        <div class="row align-items-center min-vh-100">
+            <div class="col-lg-8">
+                <div class="hero-text" data-aos="fade-right">
+                    <span class="hero-badge"><i class="fas fa-images me-2"></i>Portfolio</span>
+                    <h1 class="hero-title">Our <span class="highlight">Projects</span></h1>
+                    <p class="hero-description">Explore our completed residential and commercial works.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 d-none d-lg-block">
+                <div class="hero-image" data-aos="fade-left">
+                    <div class="floating-card card-1">
+                        <i class="fas fa-award"></i>
+                        <span>Quality Craftsmanship</span>
+                    </div>
+                    <div class="floating-card card-2">
+                        <i class="fas fa-clock"></i>
+                        <span>On-Time Delivery</span>
+                    </div>
+                    <div class="floating-card card-3">
+                        <i class="fas fa-heart"></i>
+                        <span>Client Satisfaction</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="projects-section py-5">
+    <div class="container">
+      <div class="row g-4">
+        {% for project in projects %}
+        <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in">
+          <div class="project-photo-card">
+            <img src="{{ project.image.url }}" data-full="{{ project.image.url }}" alt="Project {{ forloop.counter }}" class="project-gallery-img">
+          </div>
+        </div>
+        {% empty %}
+        <div class="col-12 text-center text-muted">No projects yet. Please add some in the admin.</div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+{% endblock %}
+

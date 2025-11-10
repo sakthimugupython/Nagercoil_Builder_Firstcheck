@@ -43,7 +43,7 @@
       <!-- Consulting -->
       <div class="col-md-6 col-lg-4">
         <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80');"></div>
+          <div class="service-card-bg" style="background-image: url('{{ service_bg.consulting }}');"></div>
           <div class="service-card-content">
             <div>
               <div class="service-card-header">
@@ -64,7 +64,7 @@
       <!-- Estimate -->
       <div class="col-md-6 col-lg-4">
         <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80');"></div>
+          <div class="service-card-bg" style="background-image: url('{{ service_bg.estimate }}');"></div>
           <div class="service-card-content">
             <div>
               <div class="service-card-header">
@@ -85,7 +85,7 @@
       <!-- Plan & Design -->
       <div class="col-md-6 col-lg-4">
         <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-          <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80');"></div>
+          <div class="service-card-bg" style="background-image: url('{{ service_bg.plan_design }}');"></div>
           <div class="service-card-content">
             <div>
               <div class="service-card-header">
@@ -95,9 +95,15 @@
               <p class="service-description">Architectural planning, drawings, and 3D modeling to translate your ideas into build-ready designs.</p>
             </div>
             <div class="service-card-footer">
+              {% if wa_link_plan %}
+              <a href="{{ wa_link_plan }}" target="_blank" rel="noopener" class="btn btn-outline-custom">
+                <i class="fab fa-whatsapp me-2"></i>WhatsApp Now
+              </a>
+              {% else %}
               <button class="btn btn-outline-custom" data-bs-toggle="modal" data-bs-target="#modalPlanDesign">
                 <i class="fas fa-arrow-right me-2"></i>View Details
               </button>
+              {% endif %}
             </div>
           </div>
         </div>
@@ -106,7 +112,7 @@
       <!-- Construction -->
       <div class="col-md-6 col-lg-4">
         <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80');"></div>
+          <div class="service-card-bg" style="background-image: url('{{ service_bg.construction }}');"></div>
           <div class="service-card-content">
             <div>
               <div class="service-card-header">
@@ -127,7 +133,7 @@
       <!-- Flooring Work -->
       <div class="col-md-6 col-lg-4">
         <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1615873968403-89e068629265?w=800&q=80');"></div>
+          <div class="service-card-bg" style="background-image: url('{{ service_bg.flooring }}');"></div>
           <div class="service-card-content">
             <div>
               <div class="service-card-header">
@@ -148,7 +154,7 @@
       <!-- Painting Work -->
       <div class="col-md-6 col-lg-4">
         <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-          <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&q=80');"></div>
+          <div class="service-card-bg" style="background-image: url('{{ service_bg.painting }}');"></div>
           <div class="service-card-content">
             <div>
               <div class="service-card-header">
@@ -169,7 +175,7 @@
       <!-- 3D Elevation Design -->
       <div class="col-md-6 col-lg-4">
         <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80');"></div>
+          <div class="service-card-bg" style="background-image: url('{{ service_bg.elevation_3d }}');"></div>
           <div class="service-card-content">
             <div>
               <div class="service-card-header">
@@ -190,7 +196,7 @@
       <!-- Electric Work -->
       <div class="col-md-6 col-lg-4">
         <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&q=80');"></div>
+          <div class="service-card-bg" style="background-image: url('{{ service_bg.electric }}');"></div>
           <div class="service-card-content">
             <div>
               <div class="service-card-header">
@@ -211,7 +217,7 @@
       <!-- Interior Work -->
       <div class="col-md-6 col-lg-4">
         <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-          <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80');"></div>
+          <div class="service-card-bg" style="background-image: url('{{ service_bg.interior_work }}');"></div>
           <div class="service-card-content">
             <div>
               <div class="service-card-header">
@@ -232,7 +238,7 @@
       <!-- Renovation -->
       <div class="col-md-6 col-lg-4">
         <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=800&q=80');"></div>
+          <div class="service-card-bg" style="background-image: url('{{ service_bg.renovation }}');"></div>
           <div class="service-card-content">
             <div>
               <div class="service-card-header">
@@ -253,7 +259,7 @@
       <!-- Interior Design -->
       <div class="col-md-6 col-lg-4">
         <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80');"></div>
+          <div class="service-card-bg" style="background-image: url('{{ service_bg.interior_design }}');"></div>
           <div class="service-card-content">
             <div>
               <div class="service-card-header">
@@ -274,7 +280,7 @@
       <!-- Carpentry Work -->
       <div class="col-md-6 col-lg-4">
         <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-          <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1617806118233-18e1de247200?w=800&q=80');"></div>
+          <div class="service-card-bg" style="background-image: url('{{ service_bg.carpentry }}');"></div>
           <div class="service-card-content">
             <div>
               <div class="service-card-header">
@@ -365,7 +371,11 @@
             </ul>
           </div>
           <div class="modal-footer">
+            {% if wa_link_plan %}
+            <a href="{{ wa_link_plan }}" target="_blank" rel="noopener" class="btn btn-primary-custom"><i class="fab fa-whatsapp me-2"></i>WhatsApp Now</a>
+            {% else %}
             <a href="{% url 'contact' %}#contact-form" class="btn btn-primary-custom">Start Planning</a>
+            {% endif %}
             <button type="button" class="btn btn-outline-custom" data-bs-dismiss="modal">Close</button>
           </div>
         </div>

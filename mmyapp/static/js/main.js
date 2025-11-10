@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScroll();
     initFormValidation();
     initCounter();
+    initLightbox();
 });
 
 // ========== Navbar Scroll Effect ==========
@@ -331,6 +332,60 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// ========== Image Lightbox (Projects) ==========
+function initLightbox() {
+    // Create overlay once
+    const overlay = document.createElement('div');
+    overlay.className = 'lightbox-overlay';
+    overlay.innerHTML = `
+      <div class="lightbox-content">
+        <button class="lightbox-close" aria-label="Close"><i class="fas fa-times"></i></button>
+        <img class="lightbox-img" alt="Project full view" />
+      </div>
+    `;
+    document.body.appendChild(overlay);
+
+    const imgEl = overlay.querySelector('.lightbox-img');
+    const closeBtn = overlay.querySelector('.lightbox-close');
+
+    const open = (src) => {
+        imgEl.src = src;
+        overlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    };
+
+    const close = () => {
+        overlay.classList.remove('open');
+        document.body.style.overflow = '';
+        imgEl.src = '';
+    };
+
+    // Click to open
+    const bind = () => {
+        document.querySelectorAll('.project-gallery-img').forEach(img => {
+            img.style.cursor = 'zoom-in';
+            img.addEventListener('click', () => {
+                const src = img.getAttribute('data-full') || img.src;
+                open(src);
+            });
+        });
+    };
+
+    // Re-bind on DOM updates (simple mutation observer)
+    const mo = new MutationObserver(() => bind());
+    mo.observe(document.body, { childList: true, subtree: true });
+    bind();
+
+    // Close interactions
+    closeBtn.addEventListener('click', close);
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) close();
+    });
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && overlay.classList.contains('open')) close();
+    });
+}
 
 // ========== Back to Top Button ==========
 const createBackToTopButton = () => {
