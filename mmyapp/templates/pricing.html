@@ -58,9 +58,15 @@
             <button type="button" class="btn btn-outline-custom" data-bs-toggle="modal" data-bs-target="#modalBasic">
               <i class="fas fa-list me-2"></i>Show More Details
             </button>
+            {% if wa_links.basic %}
+            <a href="{{ wa_links.basic }}" target="_blank" rel="noopener" class="btn btn-primary-custom">
+              <i class="fab fa-whatsapp me-2"></i>Choose Basic
+            </a>
+            {% else %}
             <a href="{% url 'contact' %}#contact-form" class="btn btn-primary-custom">
               <i class="fas fa-cart-plus me-2"></i>Choose Basic
             </a>
+            {% endif %}
           </div>
         </div>
       </div>
@@ -84,9 +90,15 @@
             <button type="button" class="btn btn-outline-custom" data-bs-toggle="modal" data-bs-target="#modalStandard">
               <i class="fas fa-list me-2"></i>Show More Details
             </button>
+            {% if wa_links.standard %}
+            <a href="{{ wa_links.standard }}" target="_blank" rel="noopener" class="btn btn-primary-custom">
+              <i class="fab fa-whatsapp me-2"></i>Choose Standard
+            </a>
+            {% else %}
             <a href="{% url 'contact' %}#contact-form" class="btn btn-primary-custom">
               <i class="fas fa-cart-plus me-2"></i>Choose Standard
             </a>
+            {% endif %}
           </div>
         </div>
       </div>
@@ -109,9 +121,15 @@
             <button type="button" class="btn btn-outline-custom" data-bs-toggle="modal" data-bs-target="#modalPremium">
               <i class="fas fa-list me-2"></i>Show More Details
             </button>
+            {% if wa_links.premium %}
+            <a href="{{ wa_links.premium }}" target="_blank" rel="noopener" class="btn btn-primary-custom">
+              <i class="fab fa-whatsapp me-2"></i>Choose Premium
+            </a>
+            {% else %}
             <a href="{% url 'contact' %}#contact-form" class="btn btn-primary-custom">
               <i class="fas fa-cart-plus me-2"></i>Choose Premium
             </a>
+            {% endif %}
           </div>
         </div>
       </div>
@@ -162,7 +180,11 @@
             </ul>
           </div>
           <div class="modal-footer">
+            {% if wa_links.basic %}
+            <a href="{{ wa_links.basic }}" target="_blank" rel="noopener" class="btn btn-primary-custom"><i class="fab fa-whatsapp me-2"></i>Choose Basic</a>
+            {% else %}
             <a href="{% url 'contact' %}#contact-form" class="btn btn-primary-custom">Choose Basic</a>
+            {% endif %}
             <button type="button" class="btn btn-outline-custom" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
@@ -214,7 +236,11 @@
             </ul>
           </div>
           <div class="modal-footer">
+            {% if wa_links.standard %}
+            <a href="{{ wa_links.standard }}" target="_blank" rel="noopener" class="btn btn-primary-custom"><i class="fab fa-whatsapp me-2"></i>Choose Standard</a>
+            {% else %}
             <a href="{% url 'contact' %}#contact-form" class="btn btn-primary-custom">Choose Standard</a>
+            {% endif %}
             <button type="button" class="btn btn-outline-custom" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
@@ -266,7 +292,11 @@
             </ul>
           </div>
           <div class="modal-footer">
+            {% if wa_links.premium %}
+            <a href="{{ wa_links.premium }}" target="_blank" rel="noopener" class="btn btn-outline-custom"><i class="fab fa-whatsapp me-2"></i>Choose Premium</a>
+            {% else %}
             <a href="{% url 'contact' %}#contact-form" class="btn btn-outline-custom">Choose Premium</a>
+            {% endif %}
             <button type="button" class="btn btn-outline-custom" data-bs-dismiss="modal">Close</button>
           </div>
         </div>

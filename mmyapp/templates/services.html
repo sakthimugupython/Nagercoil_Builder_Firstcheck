@@ -53,9 +53,15 @@
               <p class="service-description">Expert guidance to assess challenges, plan strategy, and reduce risks across your project lifecycle.</p>
             </div>
             <div class="service-card-footer">
+              {% if wa_links.consulting %}
+              <a href="{{ wa_links.consulting }}" target="_blank" rel="noopener" class="btn btn-outline-custom">
+                <i class="fab fa-whatsapp me-2"></i>WhatsApp Now
+              </a>
+              {% else %}
               <button class="btn btn-outline-custom" data-bs-toggle="modal" data-bs-target="#modalConsulting">
                 <i class="fas fa-arrow-right me-2"></i>View Details
               </button>
+              {% endif %}
             </div>
           </div>
         </div>
@@ -74,9 +80,15 @@
               <p class="service-description">Transparent budgetary estimates for cost, schedule, and materials to support informed decisions.</p>
             </div>
             <div class="service-card-footer">
+              {% if wa_links.estimate %}
+              <a href="{{ wa_links.estimate }}" target="_blank" rel="noopener" class="btn btn-outline-custom">
+                <i class="fab fa-whatsapp me-2"></i>WhatsApp Now
+              </a>
+              {% else %}
               <button class="btn btn-outline-custom" data-bs-toggle="modal" data-bs-target="#modalEstimate">
                 <i class="fas fa-arrow-right me-2"></i>View Details
               </button>
+              {% endif %}
             </div>
           </div>
         </div>
@@ -95,8 +107,8 @@
               <p class="service-description">Architectural planning, drawings, and 3D modeling to translate your ideas into build-ready designs.</p>
             </div>
             <div class="service-card-footer">
-              {% if wa_link_plan %}
-              <a href="{{ wa_link_plan }}" target="_blank" rel="noopener" class="btn btn-outline-custom">
+              {% if wa_links.plan_design %}
+              <a href="{{ wa_links.plan_design }}" target="_blank" rel="noopener" class="btn btn-outline-custom">
                 <i class="fab fa-whatsapp me-2"></i>WhatsApp Now
               </a>
               {% else %}
@@ -122,9 +134,15 @@
               <p class="service-description">End-to-end execution across residential, commercial, and interior fit-outs with strict quality control.</p>
             </div>
             <div class="service-card-footer">
+              {% if wa_links.construction %}
+              <a href="{{ wa_links.construction }}" target="_blank" rel="noopener" class="btn btn-outline-custom">
+                <i class="fab fa-whatsapp me-2"></i>WhatsApp Now
+              </a>
+              {% else %}
               <button class="btn btn-outline-custom" data-bs-toggle="modal" data-bs-target="#modalConstruction">
                 <i class="fas fa-arrow-right me-2"></i>View Details
               </button>
+              {% endif %}
             </div>
           </div>
         </div>
@@ -143,9 +161,15 @@
               <p class="service-description">Premium tile, granite, wooden, and vinyl solutions with precision laying and finishing.</p>
             </div>
             <div class="service-card-footer">
+              {% if wa_links.flooring %}
+              <a href="{{ wa_links.flooring }}" target="_blank" rel="noopener" class="btn btn-outline-custom">
+                <i class="fab fa-whatsapp me-2"></i>WhatsApp Now
+              </a>
+              {% else %}
               <button class="btn btn-outline-custom" data-bs-toggle="modal" data-bs-target="#modalFlooring">
                 <i class="fas fa-arrow-right me-2"></i>View Details
               </button>
+              {% endif %}
             </div>
           </div>
         </div>
@@ -164,9 +188,15 @@
               <p class="service-description">Interior and exterior painting with putty, primer, and premium finishes for long-lasting results.</p>
             </div>
             <div class="service-card-footer">
+              {% if wa_links.painting %}
+              <a href="{{ wa_links.painting }}" target="_blank" rel="noopener" class="btn btn-outline-custom">
+                <i class="fab fa-whatsapp me-2"></i>WhatsApp Now
+              </a>
+              {% else %}
               <button class="btn btn-outline-custom" data-bs-toggle="modal" data-bs-target="#modalPainting">
                 <i class="fas fa-arrow-right me-2"></i>View Details
               </button>
+              {% endif %}
             </div>
           </div>
         </div>
@@ -185,9 +215,15 @@
               <p class="service-description">Realistic exterior visualizations with materials, lighting, and landscaping for informed decisions.</p>
             </div>
             <div class="service-card-footer">
+              {% if wa_links.elevation_3d %}
+              <a href="{{ wa_links.elevation_3d }}" target="_blank" rel="noopener" class="btn btn-outline-custom">
+                <i class="fab fa-whatsapp me-2"></i>WhatsApp Now
+              </a>
+              {% else %}
               <button class="btn btn-outline-custom" data-bs-toggle="modal" data-bs-target="#modal3D">
                 <i class="fas fa-arrow-right me-2"></i>View Details
               </button>
+              {% endif %}
             </div>
           </div>
         </div>
@@ -206,9 +242,15 @@
               <p class="service-description">Wiring, panels, lighting, and safety-compliant electrical systems for homes and commercial spaces.</p>
             </div>
             <div class="service-card-footer">
+              {% if wa_links.electric %}
+              <a href="{{ wa_links.electric }}" target="_blank" rel="noopener" class="btn btn-outline-custom">
+                <i class="fab fa-whatsapp me-2"></i>WhatsApp Now
+              </a>
+              {% else %}
               <button class="btn btn-outline-custom" data-bs-toggle="modal" data-bs-target="#modalElectric">
                 <i class="fas fa-arrow-right me-2"></i>View Details
               </button>
+              {% endif %}
             </div>
           </div>
         </div>
@@ -227,9 +269,15 @@
               <p class="service-description">Ceilings, partitioning, cabinetry, lighting, and turnkey interior fit-outs tailored to your space.</p>
             </div>
             <div class="service-card-footer">
+              {% if wa_links.interior_work %}
+              <a href="{{ wa_links.interior_work }}" target="_blank" rel="noopener" class="btn btn-outline-custom">
+                <i class="fab fa-whatsapp me-2"></i>WhatsApp Now
+              </a>
+              {% else %}
               <button class="btn btn-outline-custom" data-bs-toggle="modal" data-bs-target="#modalInteriorWork">
                 <i class="fas fa-arrow-right me-2"></i>View Details
               </button>
+              {% endif %}
             </div>
           </div>
         </div>
@@ -248,9 +296,15 @@
               <p class="service-description">Upgrade kitchens, bathrooms, facades, and complete spaces with minimal disruption and clean finish.</p>
             </div>
             <div class="service-card-footer">
+              {% if wa_links.renovation %}
+              <a href="{{ wa_links.renovation }}" target="_blank" rel="noopener" class="btn btn-outline-custom">
+                <i class="fab fa-whatsapp me-2"></i>WhatsApp Now
+              </a>
+              {% else %}
               <button class="btn btn-outline-custom" data-bs-toggle="modal" data-bs-target="#modalRenovation">
                 <i class="fas fa-arrow-right me-2"></i>View Details
               </button>
+              {% endif %}
             </div>
           </div>
         </div>
@@ -269,9 +323,15 @@
               <p class="service-description">Space planning, color/material selection, and decor curation for beautiful, functional interiors.</p>
             </div>
             <div class="service-card-footer">
+              {% if wa_links.interior_design %}
+              <a href="{{ wa_links.interior_design }}" target="_blank" rel="noopener" class="btn btn-outline-custom">
+                <i class="fab fa-whatsapp me-2"></i>WhatsApp Now
+              </a>
+              {% else %}
               <button class="btn btn-outline-custom" data-bs-toggle="modal" data-bs-target="#modalInteriorDesign">
                 <i class="fas fa-arrow-right me-2"></i>View Details
               </button>
+              {% endif %}
             </div>
           </div>
         </div>
@@ -290,9 +350,15 @@
               <p class="service-description">Custom wardrobes, kitchens, doors, and frames with durable materials and fine craftsmanship.</p>
             </div>
             <div class="service-card-footer">
+              {% if wa_links.carpentry %}
+              <a href="{{ wa_links.carpentry }}" target="_blank" rel="noopener" class="btn btn-outline-custom">
+                <i class="fab fa-whatsapp me-2"></i>WhatsApp Now
+              </a>
+              {% else %}
               <button class="btn btn-outline-custom" data-bs-toggle="modal" data-bs-target="#modalCarpentry">
                 <i class="fas fa-arrow-right me-2"></i>View Details
               </button>
+              {% endif %}
             </div>
           </div>
         </div>
@@ -319,7 +385,11 @@
             </ul>
           </div>
           <div class="modal-footer">
+            {% if wa_links.consulting %}
+            <a href="{{ wa_links.consulting }}" target="_blank" rel="noopener" class="btn btn-primary-custom"><i class="fab fa-whatsapp me-2"></i>WhatsApp Now</a>
+            {% else %}
             <a href="{% url 'contact' %}#contact-form" class="btn btn-primary-custom">Enquire Now</a>
+            {% endif %}
             <button type="button" class="btn btn-outline-custom" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
@@ -345,7 +415,11 @@
             </ul>
           </div>
           <div class="modal-footer">
+            {% if wa_links.estimate %}
+            <a href="{{ wa_links.estimate }}" target="_blank" rel="noopener" class="btn btn-primary-custom"><i class="fab fa-whatsapp me-2"></i>WhatsApp Now</a>
+            {% else %}
             <a href="{% url 'contact' %}#contact-form" class="btn btn-primary-custom">Get an Estimate</a>
+            {% endif %}
             <button type="button" class="btn btn-outline-custom" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
@@ -371,8 +445,8 @@
             </ul>
           </div>
           <div class="modal-footer">
-            {% if wa_link_plan %}
-            <a href="{{ wa_link_plan }}" target="_blank" rel="noopener" class="btn btn-primary-custom"><i class="fab fa-whatsapp me-2"></i>WhatsApp Now</a>
+            {% if wa_links.plan_design %}
+            <a href="{{ wa_links.plan_design }}" target="_blank" rel="noopener" class="btn btn-primary-custom"><i class="fab fa-whatsapp me-2"></i>WhatsApp Now</a>
             {% else %}
             <a href="{% url 'contact' %}#contact-form" class="btn btn-primary-custom">Start Planning</a>
             {% endif %}
@@ -401,7 +475,11 @@
             </ul>
           </div>
           <div class="modal-footer">
+            {% if wa_links.construction %}
+            <a href="{{ wa_links.construction }}" target="_blank" rel="noopener" class="btn btn-primary-custom"><i class="fab fa-whatsapp me-2"></i>WhatsApp Now</a>
+            {% else %}
             <a href="{% url 'contact' %}#contact-form" class="btn btn-primary-custom">Build with Us</a>
+            {% endif %}
             <button type="button" class="btn btn-outline-custom" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
@@ -427,7 +505,11 @@
             </ul>
           </div>
           <div class="modal-footer">
+            {% if wa_links.flooring %}
+            <a href="{{ wa_links.flooring }}" target="_blank" rel="noopener" class="btn btn-primary-custom"><i class="fab fa-whatsapp me-2"></i>WhatsApp Now</a>
+            {% else %}
             <a href="{% url 'contact' %}#contact-form" class="btn btn-primary-custom">Discuss Flooring</a>
+            {% endif %}
             <button type="button" class="btn btn-outline-custom" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
@@ -453,7 +535,11 @@
             </ul>
           </div>
           <div class="modal-footer">
+            {% if wa_links.painting %}
+            <a href="{{ wa_links.painting }}" target="_blank" rel="noopener" class="btn btn-primary-custom"><i class="fab fa-whatsapp me-2"></i>WhatsApp Now</a>
+            {% else %}
             <a href="{% url 'contact' %}#contact-form" class="btn btn-primary-custom">Plan Painting</a>
+            {% endif %}
             <button type="button" class="btn btn-outline-custom" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
@@ -479,7 +565,11 @@
             </ul>
           </div>
           <div class="modal-footer">
+            {% if wa_links.elevation_3d %}
+            <a href="{{ wa_links.elevation_3d }}" target="_blank" rel="noopener" class="btn btn-primary-custom"><i class="fab fa-whatsapp me-2"></i>WhatsApp Now</a>
+            {% else %}
             <a href="{% url 'contact' %}#contact-form" class="btn btn-primary-custom">Start 3D Design</a>
+            {% endif %}
             <button type="button" class="btn btn-outline-custom" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
@@ -505,7 +595,11 @@
             </ul>
           </div>
           <div class="modal-footer">
+            {% if wa_links.electric %}
+            <a href="{{ wa_links.electric }}" target="_blank" rel="noopener" class="btn btn-primary-custom"><i class="fab fa-whatsapp me-2"></i>WhatsApp Now</a>
+            {% else %}
             <a href="{% url 'contact' %}#contact-form" class="btn btn-primary-custom">Plan Electricals</a>
+            {% endif %}
             <button type="button" class="btn btn-outline-custom" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
@@ -531,7 +625,11 @@
             </ul>
           </div>
           <div class="modal-footer">
+            {% if wa_links.interior_work %}
+            <a href="{{ wa_links.interior_work }}" target="_blank" rel="noopener" class="btn btn-primary-custom"><i class="fab fa-whatsapp me-2"></i>WhatsApp Now</a>
+            {% else %}
             <a href="{% url 'contact' %}#contact-form" class="btn btn-primary-custom">Plan Interiors</a>
+            {% endif %}
             <button type="button" class="btn btn-outline-custom" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
@@ -557,7 +655,11 @@
             </ul>
           </div>
           <div class="modal-footer">
+            {% if wa_links.renovation %}
+            <a href="{{ wa_links.renovation }}" target="_blank" rel="noopener" class="btn btn-primary-custom"><i class="fab fa-whatsapp me-2"></i>WhatsApp Now</a>
+            {% else %}
             <a href="{% url 'contact' %}#contact-form" class="btn btn-primary-custom">Renovate Now</a>
+            {% endif %}
             <button type="button" class="btn btn-outline-custom" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
@@ -583,7 +685,11 @@
             </ul>
           </div>
           <div class="modal-footer">
+            {% if wa_links.interior_design %}
+            <a href="{{ wa_links.interior_design }}" target="_blank" rel="noopener" class="btn btn-primary-custom"><i class="fab fa-whatsapp me-2"></i>WhatsApp Now</a>
+            {% else %}
             <a href="{% url 'contact' %}#contact-form" class="btn btn-primary-custom">Design My Space</a>
+            {% endif %}
             <button type="button" class="btn btn-outline-custom" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
@@ -609,7 +715,11 @@
             </ul>
           </div>
           <div class="modal-footer">
+            {% if wa_links.carpentry %}
+            <a href="{{ wa_links.carpentry }}" target="_blank" rel="noopener" class="btn btn-primary-custom"><i class="fab fa-whatsapp me-2"></i>WhatsApp Now</a>
+            {% else %}
             <a href="{% url 'contact' %}#contact-form" class="btn btn-primary-custom">Start Carpentry</a>
+            {% endif %}
             <button type="button" class="btn btn-outline-custom" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
